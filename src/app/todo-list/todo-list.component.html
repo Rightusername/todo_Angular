@@ -1,0 +1,13 @@
+<ul class="list-group">
+
+  <li *ngFor="let todo of this.service.todos" class="list-group-item completed animated " [ngClass]="{completed: todo.completed}" [@focusPanel]='todo.deleted' [@addItem]='todo.newItem' >
+    <button class="icon" (click)="completeTask(todo)" >
+      <i class="material-icons" [innerText]="todo.completed ? 'check_box' : 'check_box_outline_blank'"></i>
+    </button>
+    <span class="title">{{todo.title}}</span>
+
+    <button class="delete icon" (click)="deleteTask(todo)" >
+      <i class="material-icons">delete</i>
+    </button>
+  </li>
+</ul>

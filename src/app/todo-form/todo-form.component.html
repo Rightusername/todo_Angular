@@ -1,0 +1,7 @@
+<form  class="task_form" (submit)="addTask($event)" #todoForm="ngForm">
+  <input type="text" placeholder="new task..." [(ngModel)]="newTodoTitle" name="title"  required>
+  {{newTodoTitle}}
+  <button type="submit" class="add icon" [disabled]="todoForm.form.invalid">
+    <i class="material-icons">add</i>
+  </button>
+</form>
