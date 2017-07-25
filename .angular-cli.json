@@ -12,8 +12,8 @@
         "favicon.ico"
       ],
       "index": "index.html",
-      "deployUrl": "/dist/",
       "main": "main.ts",
+      "deployUrl": "dist",
       "polyfills": "polyfills.ts",
       "test": "test.ts",
       "tsconfig": "tsconfig.app.json",

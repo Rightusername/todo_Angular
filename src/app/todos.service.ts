@@ -2,9 +2,14 @@ import { Todo } from './Todo';
 
 
 export class TodosService {
-    todos = JSON.parse(localStorage.getItem('todos')) || [new Todo('Купить помидоры', true),
+    _todos = JSON.parse(localStorage.getItem('todos')) || [new Todo('Купить помидоры', true),
           new Todo('Помыть огурцы', false)
     ];
+
+	  get todos() {
+		return this._todos;
+	  }
+
 
     saveData(){
       localStorage.setItem('todos', JSON.stringify(this.todos));

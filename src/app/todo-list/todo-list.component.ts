@@ -55,6 +55,10 @@ export class TodoListComponent {
 
     }
 
+    getTodos(){
+      return this.service.todos;
+    }
+
     completeTask(todo) {
       todo.completed = !todo.completed;
       this.service.saveData();
